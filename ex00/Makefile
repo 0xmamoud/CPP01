@@ -1,12 +1,16 @@
 
-NAME = account
+NAME = zombie
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 RM	= rm -rf
 
-HEADER = 
-SRC =
+HEADER = Zombie.hpp
+
+SRC = main.cpp \
+	newZombie.cpp \
+	randomChump.cpp \
+	Zombie.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 
