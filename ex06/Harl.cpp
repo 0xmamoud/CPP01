@@ -41,22 +41,22 @@ void Harl::complain(std::string level) {
 	switch (statement)
 	{
 	case 0:
-	 	this->debug();
-		this->info();
-		this->warning();
-		this->error();
+	 	(this->*functionPTR[0])();
+		(this->*functionPTR[1])();
+		(this->*functionPTR[2])();
+		(this->*functionPTR[3])();
 		break;
 	case 1:
-	 	this->info();
-		this->warning();
-		this->error();
+		(this->*functionPTR[1])();
+		(this->*functionPTR[2])();
+		(this->*functionPTR[3])();
 		break;
 	case 2:
-		this->warning();
-		this->error();
+		(this->*functionPTR[2])();
+		(this->*functionPTR[3])();
 		break;	
 	case 3:
-		this->error();
+		(this->*functionPTR[3])();
 		break;
 	default:
 		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
